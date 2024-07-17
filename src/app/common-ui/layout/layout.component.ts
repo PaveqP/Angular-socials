@@ -8,15 +8,14 @@ import { ProfileService } from '../../data/services/profile-service.service';
   standalone: true,
   imports: [RouterOutlet, SidebarComponent],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+  styleUrl: './layout.component.scss',
 })
 export class LayoutComponent {
-    
-    profileService = inject(ProfileService)
+  profileService = inject(ProfileService);
 
-    ngOnInit(): void {
-        this.profileService.getMe().subscribe(val => {
-            console.log(val)
-        })
-    }
+  ngOnInit(): void {
+    this.profileService.getMe().subscribe((val) => {
+      console.log(val);
+    });
+  }
 }

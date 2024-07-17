@@ -1,12 +1,29 @@
-:host{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 230px;
-    height: 100dvh;
-    margin: 0 5%;
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 230px;
+  height: 100dvh;
+  margin: 0 5%;
 }
 
-.login-form{
-    
+.login-form {
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-show-button {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #ffffffbf;
+}
+
+.password-show-button.active {
+  color: var(--primary-color);
 }

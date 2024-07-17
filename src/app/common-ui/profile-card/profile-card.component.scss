@@ -1,58 +1,52 @@
-.profile-card{
-    border: 1px solid var(--light-color);
-    padding: 32px 24px;
+.profile-card {
+  border: 1px solid var(--light-color);
+  padding: 32px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.profile {
+  &__person {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-radius: 5px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__description {
+    max-width: 284px;
+  }
+
+  &__tags {
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  &__actions {
+  }
 }
 
-.profile{
-
-    &__person{
-        display: flex;
-        align-items: center;
-        gap: 20px;
+.person {
+  &-image {
+    img {
+      max-width: 71px;
+      max-height: 71px;
+      border-radius: 36px;
     }
+  }
 
-    &__description{
-        max-width: 284px;
-    }
+  &__info {
+    // display: flex;
+    // flex-direction: column;
+    // gap: 4px;
+  }
 
-    &__tags{
-        max-width: 200px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-    }
+  &-name {
+  }
 
-    &__actions{
-        
-    }
-}
-
-.person{
-
-    &-image{
-
-        img{
-            max-width: 71px;
-            max-height: 71px;
-            border-radius: 36px;
-        }
-    }
-
-    &__info{
-        // display: flex;
-        // flex-direction: column;
-        // gap: 4px;
-    }
-
-    &-name{
-
-    }
-
-    &-nick{
-
-    }
+  &-nick {
+  }
 }

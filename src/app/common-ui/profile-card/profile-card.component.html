@@ -1,32 +1,32 @@
 @if (profile) {
-<section class="profile-card">
+  <section class="profile-card">
     <div class="profile__person">
-        <div class="person-image">
-            <img [src]="profile.avatarUrl | imgUrl" [alt]="profile.firstName">
-        </div>
-        <div class="person__info">
-            <p class="person-name">
-                {{profile.firstName}} {{profile.lastName}}
-            </p>
-            <p class="person-nick">
-                {{profile.username}}
-            </p>
-        </div>
+      <div class="person-image">
+        <img [src]="profile.avatarUrl | imgUrl" [alt]="profile.firstName" />
+      </div>
+      <div class="person__info">
+        <p class="person-name">
+          {{ profile.firstName }} {{ profile.lastName }}
+        </p>
+        <p class="person-nick">
+          {{ profile.username }}
+        </p>
+      </div>
     </div>
     <div class="profile__description">
-        {{profile.description}}
+      {{ profile.description }}
     </div>
     <div class="profile__tags">
-        @for (skill of profile.stack; track profile.id) {
-            <div class="skill-tag">
-                {{skill}}
-            </div>
-        }
+      @for (skill of profile.stack; track profile.id) {
+        <div class="skill-tag">
+          {{ skill }}
+        </div>
+      }
     </div>
     <div class="profile__actions">
-        <button class="btn">Подписаться</button>
+      <button class="btn">Подписаться</button>
     </div>
-</section>
+  </section>
 } @else {
-    <h1>Loading...</h1>
+  <h1>Loading...</h1>
 }
